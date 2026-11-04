@@ -1,5 +1,4 @@
 function sendMessage() {
-
     let input = document.getElementById("user-input");
     let chatBox = document.getElementById("chat-box");
 
