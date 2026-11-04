@@ -1,37 +1,45 @@
-function sendMessage() {
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    let input = document.getElementById("user-input");
-    let chatBox = document.getElementById("chat-box");
+.chat-container {
+    background: #252525;
+    width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
 
-    let message = input.value.trim();
+h1 {
+    color: #00d4ff;
+}
 
-    if (message === "") {
-        return;
-    }
+#chat-box {
+    height: 300px;
+    background: #181818;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
 
-    let userMessage = document.createElement("p");
-    userMessage.innerHTML = "You: " + message;
-    chatBox.appendChild(userMessage);
+input {
+    padding: 12px;
+    width: 65%;
+    border-radius: 8px;
+    border: none;
+}
 
-    let botMessage = document.createElement("p");
-
-    let reply = "Hello! How can I help you?";
-
-    if (message.toLowerCase().includes("hello")) {
-        reply = "Hello! Welcome to AI Chatbot!";
-    }
-    else if (message.toLowerCase().includes("hi")) {
-        reply = "Hi! Nice to meet you!";
-    }
-    else if (message.toLowerCase().includes("name")) {
-        reply = "I am your AI Chatbot!";
-    }
-    else if (message.toLowerCase().includes("bye")) {
-        reply = "Goodbye! Have a nice day!";
-    }
-
-    botMessage.innerHTML = "Bot: " + reply;
-    chatBox.appendChild(botMessage);
-
-    input.value = "";
+button {
+    padding: 12px;
+    background: #00bcd4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
