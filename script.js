@@ -9,10 +9,8 @@ function sendMessage() {
     }
 
     let userMessage = document.createElement("p");
-    userMessage.innerHTML = "You: " + message;
+    userMessage.innerText = "You: " + message;
     chatBox.appendChild(userMessage);
-
-    let botMessage = document.createElement("p");
 
     let reply = "Hello! How can I help you?";
 
@@ -29,7 +27,8 @@ function sendMessage() {
         reply = "Goodbye! Have a nice day!";
     }
 
-    botMessage.innerHTML = "Bot: " + reply;
+    let botMessage = document.createElement("p");
+    botMessage.innerText = "Bot: " + reply;
     chatBox.appendChild(botMessage);
 
     input.value = "";
